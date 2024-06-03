@@ -1,1 +1,3 @@
-# DataExploration_With_AzureDataStudio
+# DataExploration With Azure Data Studio
+
+##project Overview
