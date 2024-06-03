@@ -16,4 +16,4 @@ In this project, several SQL query methods are employed to explore data from the
 
 ## Data Visualisation
 
-![Alt text](ScreenShots.1.png)
+![Alt text](ScreenShots/1.png)
