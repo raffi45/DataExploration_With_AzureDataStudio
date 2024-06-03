@@ -15,5 +15,44 @@ In this project, several SQL query methods are employed to explore data from the
 
 
 ## Data Visualisation
-
+#### identify best selling product
+```
+SELECT 
+	Categories.CategoryName, 
+	SUM(OrderDetails.Quantity) AS [number of products sold]
+FROM 
+	OrderDetails
+INNER JOIN 
+	Products ON OrderDetails.ProductID = Products.ProductID
+INNER JOIN
+	Categories ON Products.CategoryID = Categories.CategoryID
+GROUP BY 
+	Categories.CategoryName
+  ```
+##### image
 ![Alt text](ScreenShots/1.png)
+
+in azure data studio there is a feature to visualize data easily, there are various kinds of charts that can be used in the example above using bar charts to visualize data so that it can be read or understood more easily
+
+##### image bar chart
+![Alt text](ScreenShots/1a.png)
+
+#### identify total orders by country
+```
+SELECT 
+    Customers.Country,
+    COUNT(Orders.OrderID) AS TotalOrders
+FROM 
+    Orders
+INNER JOIN 
+    Customers ON Orders.CustomerID = Customers.CustomerID
+GROUP BY 
+    Customers.Country;
+```
+#### image
+![Alt text](ScreenShots/2.png)
+
+##### image bar chart
+![Alt text](ScreenShots/2a.png)
+
+
